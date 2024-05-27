@@ -6,6 +6,8 @@ format:
   revealjs:
     fig_width: 15
     fig_height: 10
+    center: true
+    preview-links: true
 fig.width: 30
 fig.height: 7
 date: 2024-05-29
@@ -14,21 +16,23 @@ slide-level: 3
 
 # Introducing Data to Viz
 
-I'm excited to introduce you to an incredibly valuable resource for anyone working with data visualization in R: the Data to Viz website. Data to Viz is a comprehensive guide designed to help users make informed decisions about which type of visualization best suits their data. The website offers a structured and intuitive approach to choosing the most effective chart for your data story.
+I'm excited to introduce you to an incredibly valuable resource for anyone working with data visualization in R: the <a href="https://www.data-to-viz.com/">Data to Viz website</a>. 
+
+Data to Viz is a comprehensive guide designed to help users make informed decisions about which type of visualization best suits their data. The website offers a structured and intuitive approach to choosing the most effective chart for your data story.
 ---
 
 It has a user-friendly navigation, that aims to guide you through a decision tree to simplify the selection process based on the nature of your data and the story you wish to tell.
 
-While I will be primarily focusing on R, it also extends support to other popular programming environments such as Python and JavaScript.
+Includes support for popular programming environments such as R, Python and JavaScript.
+---
 
 It offers best practices for data visualization, highlights common pitfalls, and provides aesthetic tips to enhance the readability and attractiveness of your charts. This makes it an excellent educational resource for both beginners and seasoned professionals aiming to improve their data storytelling skills.
----
 
 Data going to be using is the Starwars dataset (https://dplyr.tidyverse.org/reference/starwars.html) available through dplyr and originally from the Star Wars API (https://swapi.py4e.com/).
 
 # Scenario 1: Bar Charts
 
-**Objective:** Compare the number of characters by species. https://r-graph-gallery.com/barplot
+**Objective:** Compare the number of characters by species. <a href="https://r-graph-gallery.com/barplot">https://r-graph-gallery.com/barplot</a>
 
 ## Code:
 ``` {r}
@@ -42,15 +46,19 @@ ggplot(starwars,aes(x=species))+
 ```
 ---
 
-How do I re-order these - https://r-graph-gallery.com/267-reorder-a-variable-in-ggplot2.html (Method 1) & remove NAs
+**How do I re-order these** - <br>
+<a href= "https://r-graph-gallery.com/267-reorder-a-variable-in-ggplot2.html"> Use method 1 from reorder instructions</a> & remove NAs
 
 ``` r
+# set up custom df to make this easier
 swcount = starwars %>% 
-  count(species) # setting up custom df to make this easier by having the count(n) to call in fct_reorder()
+  count(species) 
 
 swcount %>%
+# filter out any NAs to be safe
   filter(!is.na(species)) %>% 
-  mutate(species = fct_reorder(species, n)) %>%
+# use forcats to reorder
+  mutate(species = fct_reorder(species, n)) %>% 
   ggplot( aes(x=n, y=species)) +
   geom_bar(stat="identity") +
   xlab("count")
@@ -63,10 +71,12 @@ library(ggplot2)
 library(forcats)
 
 swcount = starwars %>% 
-  count(species) # setting up custom df to make this easier by having the count(n) to call in fct_reorder()
+  count(species) # setting up custom df to make this easier
 
 swcount %>%
+# filter NAs to be safe
   filter(!is.na(species)) %>% 
+# use forcats to reorder
   mutate(species = fct_reorder(species, n)) %>%
   ggplot( aes(x=n, y=species)) +
   geom_bar(stat="identity") +
@@ -85,9 +95,9 @@ swcount %>%
 
 # Scenario 2: Box Plots
 
-**Objective:** Compare the distribution of heights across different species. https://r-graph-gallery.com/boxplot
+**Objective:** Compare the distribution of heights across different species. <a href="https://r-graph-gallery.com/boxplot">https://r-graph-gallery.com/boxplot</a>
 
-## Code and Explanation:
+## Code:
 
 ``` {r}
 #| echo: true
@@ -116,7 +126,7 @@ starwars %>%
 
 # Scenario 3: Density Plots
 
-**Objective:** Visualize the distribution of character ages (assuming ages were provided). https://r-graph-gallery.com/density-plot
+**Objective:** Visualize the distribution of character ages (assuming ages were provided). <a href="https://r-graph-gallery.com/density-plot">https://r-graph-gallery.com/density-plot</a>
 
 ## Code and Explanation:
 
