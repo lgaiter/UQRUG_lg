@@ -16,9 +16,9 @@ slide-level: 3
 
 # Introducing Data to Viz
 
-I'm excited to introduce you to an incredibly valuable resource for anyone working with data visualization in R: the <a href="https://www.data-to-viz.com/">Data to Viz website</a>. 
+I'm excited to introduce you to an incredibly valuable resource for anyone working with data visualisation in R: the <a href="https://www.data-to-viz.com/">Data to Viz website</a>. 
 
-Data to Viz is a comprehensive guide designed to help users make informed decisions about which type of visualization best suits their data. The website offers a structured and intuitive approach to choosing the most effective chart for your data story.
+Data to Viz is a comprehensive guide designed to help users make informed decisions about which type of visualisation best suits their data. The website offers a structured and intuitive approach to choosing the most effective chart for your data story.
 ---
 
 It has a user-friendly navigation, that aims to guide you through a decision tree to simplify the selection process based on the nature of your data and the story you wish to tell.
@@ -26,9 +26,9 @@ It has a user-friendly navigation, that aims to guide you through a decision tre
 Includes support for popular programming environments such as R, Python and JavaScript.
 ---
 
-It offers best practices for data visualization, highlights common pitfalls, and provides aesthetic tips to enhance the readability and attractiveness of your charts. This makes it an excellent educational resource for both beginners and seasoned professionals aiming to improve their data storytelling skills.
+It offers best practices for data visualisation, highlights common pitfalls, and provides aesthetic tips to enhance the readability and attractiveness of your charts. This makes it an excellent educational resource for both beginners and seasoned professionals aiming to improve their data storytelling skills.
 
-Data going to be using is the Starwars dataset (https://dplyr.tidyverse.org/reference/starwars.html) available through dplyr and originally from the Star Wars API (https://swapi.py4e.com/).
+Data going to be using is the <a href="https://dplyr.tidyverse.org/reference/starwars.html">Starwars dataset</a> available through dplyr and originally from the <a href="https://swapi.py4e.com/">Star Wars API</a> (https://swapi.py4e.com/).
 
 # Scenario 1: Bar Charts
 
@@ -85,12 +85,12 @@ swcount %>%
 
 ## Talking Points:
 
--   **Categorical Data Visualization**: Bar charts are excellent for visualizing categorical data. They provide a clear and straightforward way to compare different categories.
+-   **Categorical Data Visualisation**: Bar charts are excellent for visualising categorical data. They provide a clear and straightforward way to compare different categories.
 -   **Ease of Comparison**: By using a bar chart, especially a horizontal one (achieved with coord_flip()), we make it easy to compare the counts of different species. This orientation is particularly useful when dealing with long category names.
 ---
 
 -   **Data to Viz Recommendation**: According to the Data to Viz website, bar charts are ideal when you need to compare a single categorical variable across different groups.
--   **Clarity and Simplicity**: Bar charts are one of the simplest forms of data visualization. They are easy to understand for audiences without a deep statistical background, making them suitable for a wide range of viewers.
+-   **Clarity and Simplicity**: Bar charts are one of the simplest forms of data visualisation. They are easy to understand for audiences without a deep statistical background, making them suitable for a wide range of viewers.
 -   **Highlighting Frequencies**: The height (or length) of the bars makes it easy to see the frequency of each category at a glance. This helps in quickly identifying which species are most and least common in the dataset.
 
 # Scenario 2: Box Plots
@@ -113,7 +113,7 @@ starwars %>%
 
 ## Talking points
 
--   **Visualizing Distributions**: Box plots are particularly effective for visualizing the distribution of a continuous variable and comparing it across several categories.
+-   **Visualising Distributions**: Box plots are particularly effective for visualising the distribution of a continuous variable and comparing it across several categories.
 -   **Five-Number Summary**: They provide a summary of the data distribution using five key numbers: minimum, first quartile (Q1), median, third quartile (Q3), and maximum. This gives a clear picture of the data's central tendency and variability.
 ---
 
@@ -122,11 +122,11 @@ starwars %>%
 ---
 
 -   **Data to Viz Recommendation**: The Data to Viz website suggests using box plots for comparing the distribution of a numerical variable across different groups, making them a suitable choice for this scenario.
--   **Efficiency**: Box plots summarize a large amount of data in a compact form, making them efficient for conveying complex information.
+-   **Efficiency**: Box plots summarise a large amount of data in a compact form, making them efficient for conveying complex information.
 
 # Scenario 3: Density Plots
 
-**Objective:** Visualize the distribution of character ages (assuming ages were provided). <a href="https://r-graph-gallery.com/density-plot">https://r-graph-gallery.com/density-plot</a>
+**Objective:** Visualise the distribution of character ages (assuming ages were provided). <a href="https://r-graph-gallery.com/density-plot">https://r-graph-gallery.com/density-plot</a>
 
 ## Code and Explanation:
 
@@ -156,7 +156,7 @@ starwars %>%
 
 ## Talking points
 
--   **Continuous Data Visualization**: Density plots are ideal for visualizing the distribution of a continuous variable. They provide a smooth estimate of the variable's distribution, making it easier to see patterns.
+-   **Continuous Data Visualisation**: Density plots are ideal for visualising the distribution of a continuous variable. They provide a smooth estimate of the variable's distribution, making it easier to see patterns.
 -   **Understanding Distribution Shape**: Density plots help in understanding the shape of the data distribution (e.g., whether it is unimodal, bimodal, etc.), which is crucial for identifying trends and patterns in birth years.
 ---
 
