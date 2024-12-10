@@ -3,11 +3,11 @@
 <p>Mix of presentation materials and files used to answer questions.</p>
 
 ## Summary of what is in each folder (participant means mix of play files)
-UQRUG32 - participant
-UQRUG40 - participant
-UQRUG48 - participant
-UQRUG50 - presented on Data2Viz
-UQRUG52 - presented on taskscheduleR
-UQRUG53 - participant
-UQRUG55 - participant
-UQRUG57 - participant
+UQRUG32 - participant<br>
+UQRUG40 - participant<br>
+UQRUG48 - participant<br>
+UQRUG50 - presented on Data2Viz<br>
+UQRUG52 - presented on taskscheduleR<br>
+UQRUG53 - participant<br>
+UQRUG55 - participant<br>
+UQRUG57 - participant<br>
