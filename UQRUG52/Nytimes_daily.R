@@ -21,6 +21,3 @@ df <- merge(df,titles,by=0, all.y=TRUE)
 df <- select(df,-1)
 
 write_csv(df,"UQRUG52/NYT articles.csv")
-
-
-
